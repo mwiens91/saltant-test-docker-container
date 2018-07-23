@@ -5,10 +5,10 @@ FROM python:3-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-ADD hello_world.py /app/
+ADD hello_world.py /app
 
 # Logs can be collected here
-RUN mkdir /logs/
+RUN mkdir /logs
 
 # This will be bound to something
-RUN mkdir /bindme/
+RUN mkdir /bindme
