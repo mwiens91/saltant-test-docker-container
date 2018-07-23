@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import os
 import sys
 
 # Take the JSON args passed in - require that we have the 'name'
