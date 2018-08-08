@@ -10,6 +10,3 @@ ADD hello_world.py /app
 # Logs can be collected here
 RUN mkdir /logs
 RUN mkdir /results
-
-# This will be bound to something
-RUN mkdir /bindme
