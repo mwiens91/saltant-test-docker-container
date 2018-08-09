@@ -8,12 +8,15 @@ import sys
 # argument
 args = json.loads(sys.argv[1])
 
+def hello(name, file_):
+    print("Hello world %s" % name, file=f)
+    print("Hello job %s" % os.environ['JOB_UUID'], file=f)
+    print("Hello shell %s" % os.environ['SHELL'], file=f)
+
 with open('/logs/mylogfile.txt', 'w') as f:
     # Write hello
-    print("Hello world %s" % args['name'], file=f)
-    print("Hello shell %s" % os.environ['SHELL'], file=f)
+    hello(args['name'], f)
 
 with open('/results/myresultsfile.txt', 'w') as f:
     # Write hello again
-    print("Hello world %s" % args['name'], file=f)
-    print("Hello shell %s" % os.environ['SHELL'], file=f)
+    hello(args['name'], f)
