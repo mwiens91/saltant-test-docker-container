@@ -9,9 +9,9 @@ import sys
 args = json.loads(sys.argv[1])
 
 def hello(name, file_):
-    print("Hello world %s" % name, file=f)
-    print("Hello job %s" % os.environ['JOB_UUID'], file=f)
-    print("Hello shell %s" % os.environ['SHELL'], file=f)
+    print("Hello world %s" % name, file=file_)
+    print("Hello job %s" % os.environ['JOB_UUID'], file=file_)
+    print("Hello shell %s" % os.environ['SHELL'], file=file_)
 
 with open('/logs/mylogfile.txt', 'w') as f:
     # Write hello
